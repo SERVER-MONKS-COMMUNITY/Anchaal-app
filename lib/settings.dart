@@ -20,11 +20,15 @@ class _SettingsState extends State<Settings> {
             leading: Icon(Icons.my_location),
             title: Text("Location Access"),
             subtitle: Text("Tap to grant access"),
-            onTap: () {
-              Location().hasPermission().then((permission) {
-                if (permission == PermissionStatus.denied)
-                  Location().requestPermission();
-              });
+            onTap: () async {
+              PermissionStatus permission = await Location().hasPermission();
+              if (permission == PermissionStatus.denied ||
+                  permission == PermissionStatus.deniedForever) {
+                permission = await Location().requestPermission();
+                if (permission != PermissionStatus.granted) {
+                  return;
+                }
+              }
             },
           ),
           ListTile(
