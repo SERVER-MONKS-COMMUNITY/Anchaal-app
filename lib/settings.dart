@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
@@ -34,7 +35,12 @@ class _SettingsState extends State<Settings> {
           ListTile(
             leading: Icon(Icons.info_outline_rounded),
             title: Text("About"),
-            onTap: () {},
+            onTap: () async {
+              const url = "https://www.flutter.io";
+              await canLaunch(url)
+                  ? await launch(url)
+                  : throw "Can't launch $url";
+            },
           ),
         ],
       ),
