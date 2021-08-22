@@ -1,6 +1,6 @@
 # anchaal
 
-A new Flutter project.
+The savior for every women
 
 See it in action here: https://drive.google.com/file/d/1JZ4UwBgj72hrTvgCaSuWi9ZzL3JYuN7y/view?usp=sharing
 
