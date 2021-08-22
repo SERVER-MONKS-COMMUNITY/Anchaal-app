@@ -36,7 +36,8 @@ class _SettingsState extends State<Settings> {
             leading: Icon(Icons.info_outline_rounded),
             title: Text("About"),
             onTap: () async {
-              const url = "https://www.flutter.io"; // to be replaced
+              const url =
+                  "https://the-black-hats.github.io/Anchaal-app/"; // to be replaced
               await canLaunch(url)
                   ? await launch(url)
                   : throw "Can't launch $url";
