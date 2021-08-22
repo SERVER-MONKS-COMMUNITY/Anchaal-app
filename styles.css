@@ -48,10 +48,10 @@ h3{
 .app-screen{
   position: relative;
   z-index: -1;
-  margin-left: 15%;
+  margin-left: 12%;
   margin-bottom: 3%;
   margin-top: 1%;
-  height: 20rem;
+  height: 24rem;
   transform: rotate(10deg);
 
 }
